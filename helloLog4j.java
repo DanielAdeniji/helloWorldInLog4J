@@ -25,6 +25,7 @@ public class helloLog4j
     
         objExceptionNull = new NullPointerException("NullError");
         
+        metadata();
         
         log.debug("Hello this is a debug message");
 
