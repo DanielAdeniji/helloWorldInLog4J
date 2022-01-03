@@ -6,6 +6,8 @@ setlocal
     
     git add %_folder%\helloLog4j.class
     
+    git add %_folder%\log4j2.xml
+        
     git add %_folder%\compile.cmd
     
     git add %_folder%\invoke.cmd

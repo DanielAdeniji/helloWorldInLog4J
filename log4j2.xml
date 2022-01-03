@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration 
+    status="WARN" 
+    monitorInterval="30"
+    >
+    
+    <Properties>
+        <Property name="LOG_PATTERN">
+            %d{yyyy-MM-dd HH:mm:ss.SSS} %5p : %m%n%ex
+        </Property>
+    </Properties>
+    
+    <Appenders>
+    
+        <Console 
+            name="ConsoleAppender" 
+            target="SYSTEM_OUT" 
+            follow="true"
+        >
+            <PatternLayout>
+                <Pattern>${LOG_PATTERN}</Pattern>
+            </PatternLayout>
+        </Console>
+        
+        <File name="FileAppender" 
+              fileName="logs\app.log"
+        >
+            <PatternLayout>
+                <Pattern>${LOG_PATTERN}</Pattern>
+            </PatternLayout>
+        </File>
+        
+        
+    </Appenders>
+    
+    <Loggers>
+
+        <Root level="info">
+        
+            <AppenderRef 
+                ref="ConsoleAppender" 
+                />
+            
+            <AppenderRef 
+                ref="FileAppender" 
+                />
+            
+        </Root>
+        
+    </Loggers>
+    
+</Configuration>

@@ -11,7 +11,7 @@ public class helloLog4j
         Declare Variables
     */   
     static Logger log = null;
-   
+    
     public static void main(String[] args)
     {
        
@@ -21,7 +21,13 @@ public class helloLog4j
         Exception objExceptionNull = null;
 
         // configures the root logger
-        Logger log = LogManager.getRootLogger();    
+        log = LogManager.getRootLogger();  
+
+        /*
+            Get Logger passing on category
+                category:- ClassName
+        */    
+        //log = LogManager.getLogger(helloLog4j.class);
     
         objExceptionNull = new NullPointerException("NullError");
         
