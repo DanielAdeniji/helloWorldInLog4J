@@ -23,11 +23,16 @@ setlocal
     git add lib\log4j\%_log4J_Version%\log4j-api-2.14.1.jar
     
     git add lib\log4j\%_log4J_Version%\log4j-core-2.14.1.jar
+    
    
-   
-    git add %_folder%\helloLog4j.class
-   
-
+    set "_folderVersionSpecific=v%_log4J_Version%"
+    
+    git add %_folderVersionSpecific%\compile.cmd
+    
+    git add %_folderVersionSpecific%\invoke.cmd
+    
+    git add %_folderVersionSpecific%\helloLog4j.class
+        
     REM **********************************************************
     REM 2.17.1
     REM **********************************************************
@@ -40,7 +45,15 @@ setlocal
     
     git add lib\log4j\%_log4J_Version%\log4j-core-2.17.1.jar
     
-
+   
+    set "_folderVersionSpecific=v%_log4J_Version%"
+    
+    git add %_folderVersionSpecific%\compile.cmd
+    
+    git add %_folderVersionSpecific%\invoke.cmd
+          
+    git add %_folderVersionSpecific%\helloLog4j.class
+    
 
     REM **********************************************************
     REM Git Command Files
