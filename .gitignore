@@ -1,0 +1,19 @@
+#.gitignore
+
+# Git Command Files
+
+gitMove*.cmd
+gitRemove*.cmd
+
+logs/
+output/
+
+#v2.14
+v2.14.1/deprecated
+v2.14.1/lib
+v2.14.1/logs
+v2.14.1/output
+
+#v2.17
+v2.17.1/lib
+
